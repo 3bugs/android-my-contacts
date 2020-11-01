@@ -10,6 +10,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.mycontacts.model.User;
 import com.example.mycontacts.util.AppExecutors;
+import com.example.mycontacts.util.DateFormatter;
 
 import java.util.Calendar;
 
@@ -50,7 +51,7 @@ public abstract class AppDatabase extends RoomDatabase {
                 0,
                 "Promlert",
                 "Lovichit",
-                Calendar.getInstance().getTime(),
+                new DateFormatter().parseDateString("1974-11-21"),
                 User.GENDER_MALE,
                 false,
                 Calendar.getInstance().getTime()
@@ -59,7 +60,7 @@ public abstract class AppDatabase extends RoomDatabase {
                 0,
                 "Natpaphat",
                 "Lovichit",
-                Calendar.getInstance().getTime(),
+                new DateFormatter().parseDateString("2004-10-18"),
                 User.GENDER_FEMALE,
                 true,
                 Calendar.getInstance().getTime()
